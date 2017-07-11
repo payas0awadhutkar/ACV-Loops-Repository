@@ -14,12 +14,13 @@ public class ACV4<K,V> {
 	
 	int s = DEFAULT_INTEGER_INITIALIZATION;
 	
+	// Attacker has mechanisms to control value of condition. Code excluded
+	boolean condition;
+	
 	public V put(K key, V value) {
 		V e = null;
 		int h = DEFAULT_INTEGER_INITIALIZATION;
 		Node<K,V> node = t[h];
-		// attacker can control the value of condition.
-		boolean condition = false;
 		if(condition) {
 			// operations that do not cause ACV
 		}
